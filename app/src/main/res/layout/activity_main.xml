@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray4"
+    android:orientation="vertical">
+
+    <!-- toolbar -->
+    <include layout="@layout/toolbar_light" />
+
+    <LinearLayout
+        android:id="@+id/root_item"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/iccid"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="ICCID卡号"
+            android:textColor="@color/black" />
+
+
+        <TextView
+            android:id="@+id/carrier"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="运营商"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/totalFlow"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="总流量"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/usedFlow"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="已使用"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/leftFlow"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+
+            android:text="剩余流量"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/expiredTime"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="过期时间"
+            android:textColor="@color/black" />
+
+    </LinearLayout>
+
+
+    <com.idogfooding.backbone.widget.ViewPager
+        android:id="@id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/window_background" />
+
+</LinearLayout>

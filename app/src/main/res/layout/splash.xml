@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/RootView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_yellow">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true">
+
+        <ImageView
+            android:layout_gravity="center"
+            android:id="@+id/iv_splash"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+
+            android:src="@mipmap/ic_splash" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_skip"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/shape_rounded_bg_white"
+        android:gravity="center"
+        android:paddingLeft="8.0dip"
+        android:paddingRight="8.0dip"
+        android:textColor="@android:color/white"
+        android:textSize="13sp"
+        tools:text="@string/skip"
+        tools:visibility="visible" />
+
+</RelativeLayout>
