@@ -61,4 +61,13 @@
         android:text="NA"
         android:textColor="@color/black" />
 
+    <TextView
+        android:id="@+id/agentName"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="NA"
+        android:textColor="@color/black" />
+
 </LinearLayout>

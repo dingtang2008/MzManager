@@ -70,6 +70,14 @@
             android:gravity="center"
             android:text="过期时间"
             android:textColor="@color/black" />
+        <TextView
+            android:id="@+id/agentName"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="用户"
+            android:textColor="@color/black" />
 
     </LinearLayout>
 

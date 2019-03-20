@@ -21,6 +21,9 @@ import com.lzy.okgo.OkGo;
 import com.lzy.okgo.model.Response;
 
 
+import java.util.Iterator;
+import java.util.List;
+
 import static com.elvis.mzmanager.network.Api.RESPONSE_EXPIRED;
 
 
@@ -65,8 +68,17 @@ public class CardListFragment extends RVFragment<RowsBean, CardListAdapter> {
                 .execute(new ApiCallback<ApiHttpResult<CardEntity>>(this, true) {
                     @Override
                     public void onSuccessData(Response<ApiHttpResult<CardEntity>> response, ApiHttpResult<CardEntity> data) {
+                         List<RowsBean> rows =data.getData().getRows();
 
-                        mAdapter.setNewData(data.getData().getRows());
+                         Iterator<RowsBean> it = rows.iterator();
+
+                         while(it.hasNext()){
+                           RowsBean item =  it.next();
+                            if(item.getCardLifeEntity()==null){
+                                it.remove();
+                            }
+                         }
+                        mAdapter.setNewData(rows);
                         mAdapter.notifyDataSetChanged();
 
 //                        if (data.getCode() == 0) {

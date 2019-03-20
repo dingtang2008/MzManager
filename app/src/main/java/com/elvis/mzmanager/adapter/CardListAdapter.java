@@ -27,6 +27,6 @@ public class CardListAdapter extends RVAdapter<RowsBean, BaseViewHolder> {
 
             holder.setText(R.id.expiredTime, times[0]);
         }
-        //holder.setText(R.id.iccid, );
+        holder.setText(R.id.agentName, item.getAgentName() );
     }
 }
